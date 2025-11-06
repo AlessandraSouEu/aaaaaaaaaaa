@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consciência Negra | Cultura Afro-Brasileira</title>
+    <style>
+        /* Reset e configurações básicas */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #8B4513; /* Marrom terroso */
+            --secondary: #D2691E; /* Chocolate */
+            --accent: #FFD700; /* Dourado */
+            --light: #FFF8DC; /* Branco amarelado */
+            --dark: #2F1B0C; /* Marrom escuro */
+            --text: #5D4037; /* Marrom médio */
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Navegação */
+        nav {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            margin: -1.5rem auto 2rem;
+            max-width: 500px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+        
+        /* Conteúdo principal */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+            font-size: 1.8rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 215, 0, 0.2);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent);
+            margin: 1.5rem 0;
+        }
+        
+        /* Cards */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            height: 160px;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Galeria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .gallery-item {
+            height: 150px;
+            background-color: var(--secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Rodapé */
+        footer {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .heart {
+            color: #ff6b6b;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">✊🏿</div>
+        <h1>Consciência Negra</h1>
+        <p class="subtitle">Celebrando a cultura afro-brasileira e refletindo sobre igualdade racial</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cultura">Cultura</a></li>
+            <li><a href="#importancia">Importância</a></li>
+            <li><a href="#celebracoes">Celebrações</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="sobre">
+            <h2>Dia da Consciência Negra</h2>
+            <p>O Dia da Consciência Negra é celebrado em 20 de novembro no Brasil e é dedicado à reflexão sobre a inserção do negro na sociedade brasileira.</p>
+            
+            <div class="highlight">
+                <p>A data foi escolhida por coincidir com o dia da morte de Zumbi dos Palmares, em 1695, um dos maiores líderes negros do Brasil que lutou pela libertação do povo contra o sistema escravista.</p>
+            </div>
+            
+            <p>Diferente do 13 de maio (Lei Áurea), o 20 de novembro busca refletir sobre a posição dos negros na atualidade, questionando se realmente há liberdade e igualdade de oportunidades.</p>
+        </section>
+        
+        <section id="cultura">
+            <h2>Cultura Afro-Brasileira</h2>
+            <p>A cultura afro-brasileira é parte fundamental da identidade nacional, com contribuições em diversas áreas:</p>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-img">🍛</div>
+                    <div class="card-content">
+                        <h3>Culinária</h3>
+                        <p>Influência na gastronomia com pratos como acarajé, vatapá, feijoada e moqueca.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">🎵</div>
+                    <div class="card-content">
+                        <h3>Música e Dança</h3>
+                        <p>Samba, capoeira, maracatu e outros ritmos que são marcas registradas do Brasil.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">📚</div>
+                    <div class="card-content">
+                        <h3>Literatura</h3>
+                        <p>Autores como Machado de Assis, Lima Barreto e Conceição Evaristo.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">🙏</div>
+                    <div class="card-content">
+                        <h3>Religião</h3>
+                        <p>Influências nas religiões de matriz africana como Candomblé e Umbanda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="importancia">
+            <h2>Importância da Data</h2>
+            <p>O Dia da Consciência Negra é importante para:</p>
+            
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>Refletir sobre as desigualdades raciais ainda presentes na sociedade</li>
+                <li>Valorizar a cultura e história afro-brasileira</li>
+                <li>Combater o racismo estrutural e institucional</li>
+                <li>Promover a igualdade de oportunidades</li>
+                <li>Reconhecer as contribuições dos negros para a formação do Brasil</li>
+            </ul>
+            
+            <div class="highlight">
+                <p>Segundo o IBGE, em 2022, os negros e pardos representavam 56,1% da população brasileira, mas ainda enfrentam desigualdades significativas em indicadores como educação, renda e acesso a serviços.</p>
+            </div>
+        </section>
+        
+        <section id="celebracoes">
+            <h2>Como Celebrar</h2>
+            <p>Existem diversas formas de celebrar o Dia da Consciência Negra e apoiar a causa antirracista:</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">Eventos Culturais</div>
+                <div class="gallery-item">Palestras e Debates</div>
+                <div class="gallery-item">Feiras de Artesanato</div>
+                <div class="gallery-item">Oficinas de Capoeira</div>
+                <div class="gallery-item">Apresentações Musicais</div>
+                <div class="gallery-item">Rodas de Conversa</div>
+            </div>
+            
+            <p style="margin-top: 1.5rem;">Além disso, podemos apoiar empreendedores negros, consumir conteúdo produzido por pessoas negras e educar-nos continuamente sobre questões raciais.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Feito com <span class="heart">❤</span> para celebrar a cultura afro-brasileira</p>
+        <p>Dia da Consciência Negra - 20 de novembro</p>
+    </footer>
+</body>
+</html>
